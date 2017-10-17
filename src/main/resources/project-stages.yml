@@ -1,0 +1,11 @@
+swarm:
+  zipkin:
+    name: "nutrition-service"
+    url: "http://zipkin-bjug.192.168.42.11.nip.io"
+
+---
+project:
+    stage: local
+swarm:
+    zipkin:
+      url: "http://localhost:9411/api/v1/spans"
