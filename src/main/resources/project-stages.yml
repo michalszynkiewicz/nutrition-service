@@ -1,7 +1,7 @@
 swarm:
   zipkin:
     name: "nutrition-service"
-    url: "http://zipkin-bjug.192.168.42.11.nip.io"
+    url: "http://zipkin-openshift.bjug.svc.cluster.local:9411/api/v1/spans"
 
 ---
 project:
