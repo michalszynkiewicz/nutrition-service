@@ -1,6 +1,6 @@
 swarm:
   zipkin:
-    name: "nutrition-service"
+    name: "nutrition"
     url: "http://zipkin-openshift.bjug.svc.cluster.local:9411/api/v1/spans"
 
 ---
