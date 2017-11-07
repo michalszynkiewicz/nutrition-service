@@ -1,11 +1,14 @@
 swarm:
   zipkin:
     name: "nutrition"
-    url: "http://zipkin-openshift.4dev.svc.cluster.local:9411/api/v1/spans"
+    url: "http://zipkin-MINISHIFT_PROJECT.MINISHIFT_IP.nip.io/api/v1/spans"
 
 ---
 project:
     stage: local
 swarm:
-    zipkin:
-      url: "http://localhost:9411/api/v1/spans"
+  zipkin:
+    name: "localhost-nutrition"
+  topology:
+    consul:
+      url: "http://localhost:8500"
