@@ -36,11 +36,7 @@
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>zipkin-jaxrs</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>topology</artifactId>
-    </dependency>
-    <dependency>
+   <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
       <version>7.0</version>
@@ -65,22 +61,7 @@
   </build>
 
   <profiles>
-    <profile>
-      <id>local</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-        <property>
-          <name>!openshift</name>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>org.wildfly.swarm</groupId>
-          <artifactId>topology-consul</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-    <profile>
+   <profile>
       <id>openshift</id>
       <activation>
         <activeByDefault>false</activeByDefault>
@@ -88,13 +69,7 @@
           <name>openshift</name>
         </property>
       </activation>
-      <dependencies>
-        <dependency>
-          <groupId>org.wildfly.swarm</groupId>
-          <artifactId>topology-openshift</artifactId>
-        </dependency>
-      </dependencies>
-      <build>
+     <build>
         <plugins>
           <plugin>
             <groupId>io.fabric8</groupId>
